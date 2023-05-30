@@ -1,0 +1,95 @@
+<figure class="highcharts-figure">
+    <div id="myHistChart"></div>
+</figure>
+
+<script>
+    function render_hist_chart(data){
+        var { score10_data, score4_data, kde_line_data } = data.data;
+        var rangeBoundaries = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var rangeFreq = {
+            "0-1":0,
+            "1-2":0,
+            "2-3":0,
+            "3-4":0,
+            "4-5":0,
+            "5-6":0,
+            "6-7":0,
+            "7-8":0,
+            "8-9":0,
+            "9-10":0
+        };
+        for (var key in score10_data) {
+            var score = score10_data[key];
+            if (score < rangeBoundaries[1]) {
+                rangeFreq["0-1"]++;
+            } else if(score < rangeBoundaries[2]) {
+                rangeFreq["1-2"]++;
+            } else if(score < rangeBoundaries[3]) {
+                rangeFreq["2-3"]++;
+            } else if(score < rangeBoundaries[4]) {
+                rangeFreq["3-4"]++;
+            } else if(score < rangeBoundaries[5]) {
+                rangeFreq["4-5"]++;
+            } else if(score < rangeBoundaries[6]) {
+                rangeFreq["5-6"]++;
+            } else if(score < rangeBoundaries[7]) {
+                rangeFreq["6-7"]++;
+            } else if(score < rangeBoundaries[8]) {
+                rangeFreq["7-8"]++;
+            } else if(score < rangeBoundaries[9]) {
+                rangeFreq["8-9"]++;
+            } else {
+                rangeFreq["9-10"]++;
+            } 
+        }
+        // Convert the range frequencies into an array of values
+
+        // Set up the histogram options
+        var options = {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Histogram phổ điểm 10'
+            },
+            xAxis: {
+                categories: Object.keys(rangeFreq),
+                min: 0,
+                title: {
+                    text: 'Phổ điểm'
+                }
+            },
+            yAxis: {
+                crosshair: true,
+                title: {
+                    text: 'Số lượng'
+                }
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0,
+                    borderWidth: 0,
+                    groupPadding: 0,
+                    shadow: false
+                },
+                spline: {
+                    lineWidth: 2,
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            series: [{
+                name: 'Số lượng sinh viên',
+                binwidth: 4,
+                data: Object.values(rangeFreq)
+            }]
+        };
+
+        // Draw the chart
+        chart = Highcharts.chart('myHistChart', options);
+        
+    }
+    
+
+</script>

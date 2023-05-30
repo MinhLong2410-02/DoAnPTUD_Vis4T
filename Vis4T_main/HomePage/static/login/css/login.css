@@ -1,0 +1,276 @@
+
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+}
+::-webkit-scrollbar { 
+	width: 0 !important;
+	display: none; 
+  }
+
+
+
+.main{
+	margin: 0;
+	padding: 0;
+	
+}
+.wrapper{
+	padding: 0;
+	margin: 0;
+}
+.background-img{
+	background-color: #ebfcf9;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.img-text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex: 1;
+	margin-top:-18.75rem;
+}
+.img{
+	width: 60%;
+	height: 6.25rem;
+}
+.wrapper-form{
+	background-color: #ffff;
+	box-shadow: 0px 3px 0.3125rem -1px rgb(0 0 0 / 20%), 0px 0.375rem 0.625rem 0px rgb(0 0 0 / 14%), 0px 1px 1.125rem 0px rgb(0 0 0 / 12%);
+	height: 100vh;
+	position: relative;
+}
+.logo{
+	width: 11.25rem;
+	height: 5rem;
+}
+.block{
+	/* text-align: center; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0.625rem;
+}
+.icon{
+	height: 5rem;
+	display: block;
+	margin-bottom: -1.25rem;
+}
+.lockIcon{
+	font-size: 4rem;
+	color: rgba(99, 99, 99, 0.3);
+}
+.form{
+	position: absolute;
+	top: calc(50% - 15.625rem);
+	left: 0;
+	right: 0;
+	height: 31.25rem;
+	padding: 0.625rem;
+}
+.title{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form-group{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.input{
+	width: 97%;
+	height: 3.75rem;
+	padding: 0.625rem 1.25rem;
+	margin: 1rem;
+	font-size: 1.4375rem;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	background-color: white;
+}
+.label{
+	position: absolute;
+	font-size: 1.4375rem;
+	font-weight: 200;
+	top: 1.75rem;
+	left: 1.25rem;
+	padding: 0px 0.375rem;
+	background-color: white;
+	pointer-events: none;
+	transition: 0.18s linear;
+}
+.input:focus + .label {
+	top: -4px;
+	left: 1.875rem;
+	font-size: 1.05px;
+}
+.input:valid + .label{
+	top: -4px;
+	left: 1.875rem;
+	font-size: 1.05px;
+}
+.option{
+	position: relative;
+	padding-bottom: 2.5rem;
+
+}
+.checkbox{
+	position: absolute;
+	top: 0;
+	left: 0.625rem;
+}
+.checkbox input{
+	height: 1.25rem;
+	width: 1.25rem;
+}
+.checkbox span{
+	font-size: 1.08rem;
+	font-weight: 300;
+	line-height: 1;
+	padding-bottom: 3px;
+}
+.forgot{
+	position: absolute;
+	top: 0;
+	right: 0.625rem;
+}
+.forgot a{
+	display: block;
+	/* text-decoration: none; */
+	font-weight: 600;
+	color: black;
+	border-bottom: 1px solid black ;
+}
+
+/*Hover to class forgot*/
+
+.forgot:hover{
+	color: #3f51b5;
+	cursor: pointer;
+}
+
+.forgot a p{
+	padding: 4px 0px 4px 1rem;
+	font-size: 1.08rem;
+}
+/* .btn-wrapper{
+	
+} */
+.btn-login{
+	width: 97%;
+    height: 50px;
+    padding: 0.625rem 1.25rem;
+	font-weight: 400;
+    margin: 0.625rem;
+    font-size: 1.4275rem;
+	background-color: #3f51b5;
+	border-color: #3f51b5;
+    border-radius: 0.5rem;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-login:hover{
+	background-color: #303f9f;
+}
+
+.eye{
+	position: absolute;
+	right: 1.5625rem;
+	top: 2.1875rem;
+	cursor: pointer;
+	display: none;
+}
+.unEye{
+	position: absolute;
+	right: 1.5625rem;
+	top: 2.1875rem;
+	cursor: pointer;
+	display: none;
+}
+
+.footer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	font-weight: 300;
+	padding-top: 1.25rem;
+}
+.active{
+	display: block;
+}
+
+.back-form {
+	display: none;
+}
+  
+.up-form.flip-down {
+	animation: flip-down 0.5s ease-in-out forwards;
+}
+
+.back-form.flip-up {
+	animation: flip-up 0.5s ease-in-out forwards;
+}
+
+.back-form.flip-down {
+	animation: flip-down 0.5s ease-in-out forwards;
+}
+
+.up-form.flip-up {
+	animation: flip-up 0.5s ease-in-out forwards;
+}
+
+
+.wrap-password-reset {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title {
+	font-size: 1.5rem;
+}
+
+
+.btn-wrapper-link-to-email a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-size: 1rem;
+	color: black;
+	font-weight: 600;
+	border-bottom: 1px solid rgb(0 0 0 / 60%);
+}
+
+@keyframes flip-down {
+	0% {
+		transform: rotateY(0);
+	}
+	100% {
+		transform: rotateY(90deg);
+	}
+}
+
+@keyframes flip-up {
+	0% {
+		transform: rotateY(-90deg);
+	}
+	100% {
+		transform: rotateY(0);
+	}
+}
