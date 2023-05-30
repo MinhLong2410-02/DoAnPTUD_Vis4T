@@ -1,7 +1,10 @@
-# Đồ án môn PTUD 
-## Vis4Teacher 
+# Final project - Application Development for Data Science: Vis4Teacher
 
-- Creator: Quách Xuân Nam, Trần Minh Long
+## Author
+||ID|Fullname|
+|---|---|---|
+|1|20078291|Trần Minh Long|
+|2|20020541|Quách Xuân Nam|
 
 ## Website's url: 
 - URL: https://vis4t.iuhcoder.com/
